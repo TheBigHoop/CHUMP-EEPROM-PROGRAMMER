@@ -4,8 +4,8 @@
 #define A1_PIN A2   // Address bit 1
 #define A2_PIN A5   // Address bit 2
 #define A3_PIN A4   // Address bit 3 (MSB of 4-bit address)
-#define A4_PIN A6   // Page select bit 0 - connects to 555 timer for clock input
-#define A7_PIN A7   // Page select bit 1 - selects between function sets (Personal/Feinberg)
+#define A4_PIN 11   // Page select bit 0 - connects to 555 timer for clock input
+#define A7_PIN 12   // Page select bit 1 - selects between function sets (Personal/Feinberg)
 
 #define IO0_PIN A1  // Data bit 0 (LSB) - EEPROM I/O pin
 #define IO1_PIN A0  // Data bit 1 - EEPROM I/O pin
@@ -121,6 +121,8 @@ void setup() {
   pinMode(A1_PIN, OUTPUT);                          // Set A1 as output for address bit 1
   pinMode(A2_PIN, OUTPUT);                          // Set A2 as output for address bit 2
   pinMode(A3_PIN, OUTPUT);                          // Set A3 as output for address bit 3
+  pinMode(A4_PIN, OUTPUT);                          // Set A4 (pin 11) as output for page select bit 0
+  pinMode(A7_PIN, OUTPUT);                          // Set A7 (pin 12) as output for page select bit 1
 
   pinMode(IO0_PIN, INPUT);                          // Set IO0 as input (data bit 0)
   pinMode(IO1_PIN, INPUT);                          // Set IO1 as input (data bit 1)
